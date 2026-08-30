@@ -1,4 +1,3 @@
-```tsx
 import Link from "next/link";
 
 const calendly =
@@ -46,10 +45,9 @@ const services = [
   },
 ];
 
-export default function Services() {
+export default function ServicesPage() {
   return (
     <main>
-      {/* NAVIGATION */}
       <nav className="nav">
         <div className="navInner">
           <Link href="/" className="brand">
@@ -76,23 +74,20 @@ export default function Services() {
         </div>
       </nav>
 
-      {/* HEADER */}
       <section className="pageHero">
         <div className="eyebrow">WHAT I DO</div>
 
         <h1>
-          Practical outbound support for{" "}
-          <em>B2B businesses.</em>
+          Practical outbound support for <em>B2B businesses.</em>
         </h1>
 
         <p>
-          From finding the right prospects to preparing targeted outreach,
-          I focus on the research and systems behind a stronger outbound
+          From finding the right prospects to preparing targeted outreach, I
+          focus on the research and systems behind a stronger outbound
           pipeline.
         </p>
       </section>
 
-      {/* SERVICES */}
       <section className="darkSection">
         <div className="section">
           <div className="serviceGrid largeServices">
@@ -109,7 +104,6 @@ export default function Services() {
         </div>
       </section>
 
-      {/* WHO IT IS FOR */}
       <section className="section">
         <div className="sectionHead">
           <div>
@@ -129,8 +123,8 @@ export default function Services() {
             <span>01</span>
             <h3>B2B Agencies</h3>
             <p>
-              Find businesses that are likely to need your service and
-              reach relevant decision-makers.
+              Find businesses that are likely to need your service and reach
+              relevant decision-makers.
             </p>
           </div>
 
@@ -154,14 +148,11 @@ export default function Services() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="finalCta">
         <div>
-          <div className="eyebrow">LET'S TALK</div>
+          <div className="eyebrow">LET&apos;S TALK</div>
 
-          <h2>
-            Have a market you want to reach?
-          </h2>
+          <h2>Have a market you want to reach?</h2>
 
           <p>
             Let's discuss your offer, target customer and outbound goals.
@@ -178,14 +169,13 @@ export default function Services() {
         </a>
       </section>
 
-      {/* FOOTER */}
       <footer className="footer">
         <div>
           <strong>
             Sameer Jadoon<span>.</span>
           </strong>
 
-          <p>B2B Lead Generation & Cold Email Specialist</p>
+          <p>B2B Lead Generation &amp; Cold Email Specialist</p>
         </div>
 
         <div className="footerLinks">
@@ -203,4 +193,3 @@ export default function Services() {
     </main>
   );
 }
-```
