@@ -1,4 +1,3 @@
-```tsx
 import Link from "next/link";
 
 const calendly =
@@ -46,10 +45,9 @@ const steps = [
   },
 ];
 
-export default function Process() {
+export default function ProcessPage() {
   return (
     <main>
-      {/* NAVIGATION */}
       <nav className="nav">
         <div className="navInner">
           <Link href="/" className="brand">
@@ -76,23 +74,19 @@ export default function Process() {
         </div>
       </nav>
 
-      {/* HEADER */}
       <section className="pageHero">
         <div className="eyebrow">THE PROCESS</div>
 
         <h1>
-          A systematic approach to{" "}
-          <em>outbound.</em>
+          A systematic approach to <em>outbound.</em>
         </h1>
 
         <p>
           Good outbound is not simply about sending more emails. It starts
-          with understanding who should be contacted and why they should
-          care.
+          with understanding who should be contacted and why they should care.
         </p>
       </section>
 
-      {/* PROCESS */}
       <section className="section">
         <div className="processLargeGrid">
           {steps.map((step) => (
@@ -101,7 +95,6 @@ export default function Process() {
 
               <div>
                 <h2>{step.title}</h2>
-
                 <p>{step.text}</p>
               </div>
             </article>
@@ -109,7 +102,6 @@ export default function Process() {
         </div>
       </section>
 
-      {/* PRINCIPLES */}
       <section className="darkSection">
         <div className="section">
           <div className="eyebrow lightEyebrow">CORE PRINCIPLES</div>
@@ -122,8 +114,8 @@ export default function Process() {
             <div>
               <h3>Relevance</h3>
               <p>
-                Every prospect should have a logical reason for being in
-                the campaign.
+                Every prospect should have a logical reason for being in the
+                campaign.
               </p>
             </div>
 
@@ -138,34 +130,29 @@ export default function Process() {
             <div>
               <h3>Clarity</h3>
               <p>
-                Messages should be simple enough for a prospect to
-                understand quickly.
+                Messages should be simple enough for a prospect to understand
+                quickly.
               </p>
             </div>
 
             <div>
               <h3>Iteration</h3>
               <p>
-                Outbound improves when campaign signals are reviewed and
-                used to refine the process.
+                Outbound improves when campaign signals are reviewed and used
+                to refine the process.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
       <section className="finalCta">
         <div>
           <div className="eyebrow">READY TO START?</div>
 
-          <h2>
-            Let's build a more focused outbound system.
-          </h2>
+          <h2>Let's build a more focused outbound system.</h2>
 
-          <p>
-            Bring your offer and target market. We'll start from there.
-          </p>
+          <p>Bring your offer and target market. We'll start from there.</p>
         </div>
 
         <a
@@ -178,14 +165,13 @@ export default function Process() {
         </a>
       </section>
 
-      {/* FOOTER */}
       <footer className="footer">
         <div>
           <strong>
             Sameer Jadoon<span>.</span>
           </strong>
 
-          <p>B2B Lead Generation & Cold Email Specialist</p>
+          <p>B2B Lead Generation &amp; Cold Email Specialist</p>
         </div>
 
         <div className="footerLinks">
@@ -203,4 +189,3 @@ export default function Process() {
     </main>
   );
 }
-```
