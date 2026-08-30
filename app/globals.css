@@ -42,23 +42,41 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+img {
+  max-width: 100%;
+}
+
 .container {
   width: min(1180px, calc(100% - 48px));
   margin: auto;
 }
 
-/* NAV */
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
 
 .nav {
-  height: 84px;
+  width: 100%;
+  min-height: 84px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  background: rgba(247, 248, 252, 0.96);
+}
+
+.navInner {
+  width: min(1180px, calc(100% - 48px));
+  margin: auto;
+  min-height: 84px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--line);
+  gap: 30px;
 }
 
 .brand {
-  font: 700 29px "Space Grotesk";
+  flex-shrink: 0;
+  font: 700 29px "Space Grotesk", sans-serif;
   letter-spacing: -2px;
 }
 
@@ -69,23 +87,23 @@ a {
 
 .navLinks {
   display: flex;
-  gap: 32px;
+  align-items: center;
+  gap: 28px;
   color: #697184;
   font-size: 13px;
   font-weight: 500;
 }
 
-.navLinks a,
-.footerLinks a {
-  transition: color .2s ease;
+.navLinks a {
+  transition: color 0.2s ease;
 }
 
-.navLinks a:hover,
-.footerLinks a:hover {
+.navLinks a:hover {
   color: var(--blue);
 }
 
 .navCta {
+  flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -95,7 +113,7 @@ a {
   border-radius: 999px;
   font-size: 13px;
   font-weight: 700;
-  transition: .2s ease;
+  transition: 0.2s ease;
 }
 
 .navCta:hover {
@@ -103,12 +121,14 @@ a {
   transform: translateY(-2px);
 }
 
-/* HERO */
+/* =========================================================
+   HOMEPAGE HERO
+   ========================================================= */
 
 .hero {
   min-height: 700px;
   display: grid;
-  grid-template-columns: 1.08fr .92fr;
+  grid-template-columns: 1.08fr 0.92fr;
   gap: 80px;
   align-items: center;
   padding: 78px 0;
@@ -153,7 +173,7 @@ a {
 .hero h1 {
   margin: 0;
   max-width: 850px;
-  font: 600 clamp(50px, 6.3vw, 82px) / .98 "Space Grotesk";
+  font: 600 clamp(50px, 6.3vw, 82px) / 0.98 "Space Grotesk", sans-serif;
   letter-spacing: -5px;
 }
 
@@ -184,7 +204,7 @@ a {
   border-radius: 999px;
   font-size: 13px;
   font-weight: 700;
-  transition: .22s ease;
+  transition: 0.22s ease;
 }
 
 .button.primary {
@@ -210,6 +230,10 @@ a {
   transform: translateY(-3px);
 }
 
+.button.big {
+  padding: 17px 24px;
+}
+
 .toolLine {
   display: flex;
   gap: 11px;
@@ -224,7 +248,9 @@ a {
   font-style: normal;
 }
 
-/* PORTRAIT */
+/* =========================================================
+   PORTRAIT
+   ========================================================= */
 
 .portraitWrap {
   position: relative;
@@ -268,7 +294,7 @@ a {
   align-items: center;
   gap: 12px;
   padding: 14px 17px;
-  background: rgba(11, 16, 32, .94);
+  background: rgba(11, 16, 32, 0.94);
   color: white;
   border: 1px solid #ffffff18;
   border-radius: 15px;
@@ -299,7 +325,9 @@ a {
   font-size: 10px;
 }
 
-/* TRUST */
+/* =========================================================
+   TRUST
+   ========================================================= */
 
 .trustBar {
   border-block: 1px solid var(--line);
@@ -313,7 +341,7 @@ a {
   justify-content: space-between;
   gap: 20px;
   color: #9aa1af;
-  font: 600 10px "Space Grotesk";
+  font: 600 10px "Space Grotesk", sans-serif;
   letter-spacing: 1.8px;
 }
 
@@ -325,7 +353,9 @@ a {
   color: var(--blue);
 }
 
-/* SECTIONS */
+/* =========================================================
+   GENERAL SECTIONS
+   ========================================================= */
 
 .section {
   padding: 125px 0;
@@ -343,7 +373,7 @@ a {
 .processHeading h2 {
   max-width: 750px;
   margin: 0;
-  font: 600 clamp(40px, 5vw, 61px) / 1.02 "Space Grotesk";
+  font: 600 clamp(40px, 5vw, 61px) / 1.02 "Space Grotesk", sans-serif;
   letter-spacing: -3px;
 }
 
@@ -355,11 +385,13 @@ a {
   font-size: 14px;
 }
 
-/* CASE STUDIES */
+/* =========================================================
+   CASE STUDIES / HOME
+   ========================================================= */
 
 .caseGrid {
   display: grid;
-  grid-template-columns: 1.12fr .88fr;
+  grid-template-columns: 1.12fr 0.88fr;
   gap: 18px;
 }
 
@@ -371,7 +403,7 @@ a {
   border: 1px solid var(--line);
   background: white;
   border-radius: 24px;
-  transition: .25s ease;
+  transition: 0.25s ease;
 }
 
 .caseCard:hover {
@@ -391,15 +423,15 @@ a {
   box-shadow: 0 25px 70px #0b10201f;
 }
 
-.caseTop {
-  display: flex;
-  justify-content: space-between;
+.caseTop,
+.caseNumber {
   color: #8b93a5;
-  font: 600 10px "Space Grotesk";
+  font: 600 10px "Space Grotesk", sans-serif;
   letter-spacing: 1.6px;
 }
 
-.featured .caseTop {
+.featured .caseTop,
+.featured .caseNumber {
   color: #8f9cc0;
 }
 
@@ -422,7 +454,7 @@ a {
 .caseCard h3 {
   max-width: 600px;
   margin: 0 0 17px;
-  font: 600 29px / 1.1 "Space Grotesk";
+  font: 600 29px / 1.1 "Space Grotesk", sans-serif;
   letter-spacing: -1.5px;
 }
 
@@ -471,19 +503,25 @@ a {
   font-weight: 700;
 }
 
-/* DARK SERVICES */
+/* =========================================================
+   DARK SECTIONS
+   ========================================================= */
 
 .darkSection {
   background: var(--navy);
   color: white;
 }
 
-.light .eyebrow {
-  color: #7699ff;
+.lightEyebrow {
+  color: #8cacff !important;
 }
 
-.light > p {
-  color: #8f98ad;
+.lightHeading {
+  max-width: 800px;
+  margin: 0 0 65px;
+  color: white;
+  font: 600 clamp(38px, 5vw, 60px) / 1.03 "Space Grotesk", sans-serif;
+  letter-spacing: -3px;
 }
 
 .serviceGrid {
@@ -506,7 +544,7 @@ a {
 
 .serviceNumber {
   color: #68748f;
-  font: 600 11px "Space Grotesk";
+  font: 600 11px "Space Grotesk", sans-serif;
 }
 
 .serviceIcon {
@@ -526,7 +564,8 @@ a {
 
 .service h3 {
   margin: 70px 0 12px;
-  font: 600 21px "Space Grotesk";
+  color: white;
+  font: 600 21px "Space Grotesk", sans-serif;
 }
 
 .service p {
@@ -537,7 +576,9 @@ a {
   line-height: 1.7;
 }
 
-/* PROCESS */
+/* =========================================================
+   PROCESS - HOME
+   ========================================================= */
 
 .processHeading {
   display: flex;
@@ -574,12 +615,12 @@ a {
 
 .processItem > span {
   color: var(--blue);
-  font: 600 11px "Space Grotesk";
+  font: 600 11px "Space Grotesk", sans-serif;
 }
 
 .processItem h3 {
   margin: 55px 0 10px;
-  font: 600 21px "Space Grotesk";
+  font: 600 21px "Space Grotesk", sans-serif;
 }
 
 .processItem p {
@@ -589,7 +630,9 @@ a {
   line-height: 1.7;
 }
 
-/* CREDENTIALS */
+/* =========================================================
+   CREDENTIALS - HOME
+   ========================================================= */
 
 .credentials {
   background: #eef1f8;
@@ -606,7 +649,7 @@ a {
   border: 1px solid #dde2ed;
   background: white;
   border-radius: 23px;
-  transition: .25s ease;
+  transition: 0.25s ease;
 }
 
 .credentialCard:hover {
@@ -646,13 +689,13 @@ a {
   color: white;
   background: var(--blue);
   border-radius: 17px;
-  font: 700 30px "Space Grotesk";
+  font: 700 30px "Space Grotesk", sans-serif;
   box-shadow: 0 15px 35px #4f7cff35;
 }
 
 .pdfPreview strong {
   max-width: 400px;
-  font: 600 22px "Space Grotesk";
+  font: 600 22px "Space Grotesk", sans-serif;
 }
 
 .pdfPreview small {
@@ -671,9 +714,10 @@ a {
   font-weight: 800;
 }
 
+.credentialBody h2,
 .credentialBody h3 {
   margin: 13px 0;
-  font: 600 26px "Space Grotesk";
+  font: 600 26px "Space Grotesk", sans-serif;
 }
 
 .credentialBody p {
@@ -697,7 +741,9 @@ a {
   font-size: 11px !important;
 }
 
-/* ABOUT */
+/* =========================================================
+   ABOUT - HOME
+   ========================================================= */
 
 .about {
   display: grid;
@@ -708,7 +754,7 @@ a {
 .about h2 {
   max-width: 560px;
   margin: 0;
-  font: 600 51px / 1.02 "Space Grotesk";
+  font: 600 51px / 1.02 "Space Grotesk", sans-serif;
   letter-spacing: -2.7px;
 }
 
@@ -725,10 +771,420 @@ a {
 .aboutCopy .largeText {
   margin-top: 0;
   color: #202638;
-  font: 500 21px / 1.55 "Space Grotesk";
+  font: 500 21px / 1.55 "Space Grotesk", sans-serif;
 }
 
-/* FINAL CTA */
+/* =========================================================
+   INNER PAGE HERO
+   ========================================================= */
+
+.pageHero,
+.innerHero {
+  padding: 115px 0 85px;
+  background: var(--bg);
+}
+
+.pageHero {
+  width: min(900px, calc(100% - 48px));
+  margin: auto;
+}
+
+.innerHero .container {
+  width: min(1180px, calc(100% - 48px));
+}
+
+.pageHero h1,
+.innerHero h1 {
+  max-width: 950px;
+  margin: 0;
+  font: 600 clamp(48px, 6vw, 76px) / 1 "Space Grotesk", sans-serif;
+  letter-spacing: -4px;
+}
+
+.pageHero h1 em,
+.innerHero h1 span {
+  color: var(--blue);
+  font-style: normal;
+}
+
+.pageHero > p,
+.innerHeroText {
+  max-width: 680px;
+  margin: 30px 0 0;
+  color: #697284;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   INNER CONTENT
+   ========================================================= */
+
+.innerContent {
+  padding: 40px 0 120px;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 100px;
+  padding: 80px 0;
+  border-top: 1px solid var(--line);
+}
+
+.contentGrid h2 {
+  max-width: 500px;
+  margin: 0;
+  font: 600 43px / 1.05 "Space Grotesk", sans-serif;
+  letter-spacing: -2.5px;
+}
+
+.contentText p {
+  margin: 0 0 22px;
+  color: #687183;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.contentText p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   ABOUT CARDS
+   ========================================================= */
+
+.aboutCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.aboutCards article {
+  min-height: 250px;
+  padding: 30px 30px 35px 0;
+}
+
+.aboutCards article:not(:first-child) {
+  padding-left: 30px;
+  border-left: 1px solid var(--line);
+}
+
+.aboutCards span {
+  color: var(--blue);
+  font: 600 11px "Space Grotesk", sans-serif;
+}
+
+.aboutCards h3 {
+  margin: 60px 0 12px;
+  font: 600 22px "Space Grotesk", sans-serif;
+}
+
+.aboutCards p {
+  margin: 0;
+  color: #747d8d;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   TOOLS
+   ========================================================= */
+
+.toolsSection {
+  padding: 90px 0;
+}
+
+.toolsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.toolsGrid span {
+  padding: 17px 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: white;
+  color: #50596b;
+  font-size: 12px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.toolsGrid span:hover {
+  border-color: #bfcdf0;
+  color: var(--blue);
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   INNER CTA
+   ========================================================= */
+
+.innerCta {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 60px;
+  color: white;
+  background:
+    radial-gradient(circle at 90% 10%, #4f7cff40, transparent 30%),
+    linear-gradient(135deg, #0b1020, #131d38);
+  border-radius: 28px;
+}
+
+.innerCta h2 {
+  max-width: 700px;
+  margin: 0;
+  font: 600 clamp(34px, 4vw, 50px) / 1.05 "Space Grotesk", sans-serif;
+  letter-spacing: -2.5px;
+}
+
+.innerCta .eyebrow {
+  color: #8cacff;
+}
+
+.innerActions {
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.backLink {
+  margin-top: 45px;
+}
+
+.backLink a {
+  color: #697284;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.backLink a:hover {
+  color: var(--blue);
+}
+
+/* =========================================================
+   CREDENTIALS PAGE
+   ========================================================= */
+
+.credentialPageGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  padding-top: 40px;
+}
+
+.credentialIntro {
+  max-width: 750px;
+  padding: 100px 0 30px;
+}
+
+.credentialIntro h2 {
+  margin: 0 0 20px;
+  font: 600 clamp(35px, 4vw, 50px) / 1.05 "Space Grotesk", sans-serif;
+  letter-spacing: -2.5px;
+}
+
+.credentialIntro > p:last-child {
+  color: #697284;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   LARGE PROCESS PAGE
+   ========================================================= */
+
+.processLargeGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--line);
+}
+
+.processLargeItem {
+  min-height: 300px;
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 25px;
+  padding: 38px 35px 40px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.processLargeItem:nth-child(even) {
+  padding-left: 35px;
+  border-left: 1px solid var(--line);
+}
+
+.processNumber {
+  color: var(--blue);
+  font: 600 12px "Space Grotesk", sans-serif;
+}
+
+.processLargeItem h2 {
+  margin: 0 0 15px;
+  font: 600 29px "Space Grotesk", sans-serif;
+  letter-spacing: -1px;
+}
+
+.processLargeItem p {
+  max-width: 420px;
+  margin: 0;
+  color: #697284;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   PRINCIPLES
+   ========================================================= */
+
+.principlesGrid,
+.approachGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid #ffffff16;
+}
+
+.principlesGrid > div,
+.approachGrid > div {
+  min-height: 230px;
+  padding: 28px 25px 30px 0;
+}
+
+.principlesGrid > div:not(:first-child),
+.approachGrid > div:not(:first-child) {
+  padding-left: 25px;
+  border-left: 1px solid #ffffff16;
+}
+
+.principlesGrid h3,
+.approachGrid h3 {
+  margin: 55px 0 12px;
+  color: white;
+  font: 600 20px "Space Grotesk", sans-serif;
+}
+
+.principlesGrid p,
+.approachGrid p {
+  margin: 0;
+  color: #929bb0;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.principlesGrid > div::before,
+.approachGrid > div > span {
+  color: #8cacff;
+  font: 600 11px "Space Grotesk", sans-serif;
+}
+
+.approachGrid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.approachGrid > div {
+  min-height: 220px;
+}
+
+.approachGrid > div > span {
+  display: block;
+}
+
+/* =========================================================
+   WORK DETAILS
+   ========================================================= */
+
+.workDetails {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 30px;
+  margin: 30px 0;
+  padding-top: 25px;
+  border-top: 1px solid var(--line);
+}
+
+.featured .workDetails {
+  border-top-color: #ffffff18;
+}
+
+.workDetails div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.workDetails strong {
+  color: #30384a;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+}
+
+.featured .workDetails strong {
+  color: #cbd4e8;
+}
+
+.workDetails span {
+  color: #71798a;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.featured .workDetails span {
+  color: #9da8bf;
+}
+
+/* =========================================================
+   AUDIENCE
+   ========================================================= */
+
+.audienceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.audienceCard {
+  min-height: 250px;
+  padding: 30px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  transition: 0.25s ease;
+}
+
+.audienceCard:hover {
+  transform: translateY(-4px);
+  border-color: #c9d3ec;
+  box-shadow: 0 20px 50px #1b23400e;
+}
+
+.audienceCard span {
+  color: var(--blue);
+  font: 600 11px "Space Grotesk", sans-serif;
+}
+
+.audienceCard h3 {
+  margin: 55px 0 12px;
+  font: 600 22px "Space Grotesk", sans-serif;
+}
+
+.audienceCard p {
+  margin: 0;
+  color: #747d8d;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   FINAL CTA
+   ========================================================= */
 
 .finalCta {
   margin: 0 24px;
@@ -740,7 +1196,12 @@ a {
   border-radius: 30px;
 }
 
-.finalCtaInner {
+.finalCta > div {
+  width: min(1180px, calc(100% - 48px));
+  margin: auto;
+}
+
+.finalCta {
   display: flex;
   align-items: end;
   justify-content: space-between;
@@ -750,12 +1211,17 @@ a {
 .finalCta h2 {
   max-width: 750px;
   margin: 0;
-  font: 600 clamp(38px, 5vw, 58px) / 1.03 "Space Grotesk";
+  font: 600 clamp(38px, 5vw, 58px) / 1.03 "Space Grotesk", sans-serif;
   letter-spacing: -2.8px;
 }
 
 .finalCta p:not(.eyebrow) {
   color: #9ca7bd;
+}
+
+.finalCta .button {
+  flex-shrink: 0;
+  margin-right: max(0px, calc((100vw - 1180px) / 2));
 }
 
 .ctaButton {
@@ -771,10 +1237,14 @@ a {
   transform: translateY(-3px);
 }
 
-/* FOOTER */
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 .footer {
+  width: min(1180px, calc(100% - 48px));
   min-height: 170px;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -782,7 +1252,7 @@ a {
 }
 
 .footer strong {
-  font: 700 23px "Space Grotesk";
+  font: 700 23px "Space Grotesk", sans-serif;
 }
 
 .footer p {
@@ -799,11 +1269,25 @@ a {
   font-weight: 600;
 }
 
-/* RESPONSIVE */
+.footerLinks a {
+  transition: color 0.2s ease;
+}
+
+.footerLinks a:hover {
+  color: var(--blue);
+}
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
 
 @media (max-width: 900px) {
   .navLinks {
     display: none;
+  }
+
+  .navInner {
+    min-height: 78px;
   }
 
   .hero {
@@ -825,8 +1309,7 @@ a {
   }
 
   .sectionHead,
-  .processHeading,
-  .finalCtaInner {
+  .processHeading {
     display: block;
   }
 
@@ -837,7 +1320,9 @@ a {
 
   .caseGrid,
   .credentialGrid,
-  .about {
+  .about,
+  .credentialPageGrid,
+  .contentGrid {
     grid-template-columns: 1fr;
   }
 
@@ -871,22 +1356,111 @@ a {
     gap: 45px;
   }
 
-  .finalCtaInner .ctaButton {
+  .pageHero,
+  .innerHero {
+    padding: 90px 0 65px;
+  }
+
+  .contentGrid {
+    gap: 50px;
+  }
+
+  .aboutCards {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutCards article {
+    padding: 30px 0;
+  }
+
+  .aboutCards article:not(:first-child) {
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid var(--line);
+  }
+
+  .toolsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .innerCta {
+    display: block;
+  }
+
+  .innerActions {
     margin-top: 30px;
+  }
+
+  .processLargeGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .processLargeItem:nth-child(even) {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .principlesGrid,
+  .approachGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .principlesGrid > div:nth-child(odd),
+  .approachGrid > div:nth-child(odd) {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .principlesGrid > div:nth-child(even),
+  .approachGrid > div:nth-child(even) {
+    padding-left: 25px;
+    border-left: 1px solid #ffffff16;
+  }
+
+  .audienceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .workDetails {
+    grid-template-columns: 1fr;
+  }
+
+  .finalCta {
+    display: block;
+  }
+
+  .finalCta .button {
+    display: inline-flex;
+    margin: 30px 0 0;
   }
 }
 
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
 @media (max-width: 600px) {
-  .container {
+  .container,
+  .navInner,
+  .footer {
     width: calc(100% - 30px);
   }
 
   .nav {
-    height: 72px;
+    min-height: 72px;
+  }
+
+  .navInner {
+    min-height: 72px;
+  }
+
+  .brand {
+    font-size: 26px;
   }
 
   .navCta {
     padding: 10px 14px;
+    font-size: 12px;
   }
 
   .hero {
@@ -965,10 +1539,111 @@ a {
     font-size: 39px;
   }
 
+  .pageHero,
+  .innerHero {
+    width: auto;
+    padding: 70px 15px 50px;
+  }
+
+  .pageHero h1,
+  .innerHero h1 {
+    font-size: 46px;
+    letter-spacing: -3px;
+  }
+
+  .pageHero > p,
+  .innerHeroText {
+    font-size: 15px;
+  }
+
+  .innerContent {
+    padding: 20px 0 75px;
+  }
+
+  .contentGrid {
+    padding: 55px 0;
+  }
+
+  .contentGrid h2 {
+    font-size: 36px;
+  }
+
+  .toolsSection {
+    padding: 65px 0;
+  }
+
+  .toolsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .innerCta {
+    padding: 35px 25px;
+    border-radius: 22px;
+  }
+
+  .innerCta h2 {
+    font-size: 34px;
+  }
+
+  .credentialPageGrid {
+    padding-top: 20px;
+  }
+
+  .credentialIntro {
+    padding: 70px 0 20px;
+  }
+
+  .credentialIntro h2 {
+    font-size: 35px;
+  }
+
+  .processLargeItem {
+    grid-template-columns: 45px 1fr;
+    gap: 15px;
+    min-height: 250px;
+    padding: 30px 0;
+  }
+
+  .processLargeItem h2 {
+    font-size: 26px;
+  }
+
+  .lightHeading {
+    font-size: 38px;
+    letter-spacing: -2px;
+  }
+
+  .principlesGrid,
+  .approachGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .principlesGrid > div,
+  .approachGrid > div,
+  .principlesGrid > div:nth-child(even),
+  .approachGrid > div:nth-child(even) {
+    padding-left: 0;
+    border-left: none;
+    border-bottom: 1px solid #ffffff16;
+  }
+
+  .principlesGrid > div:last-child,
+  .approachGrid > div:last-child {
+    border-bottom: none;
+  }
+
+  .audienceCard {
+    min-height: 220px;
+  }
+
   .finalCta {
     margin: 0 15px;
-    padding: 70px 0;
+    padding: 60px 0;
     border-radius: 24px;
+  }
+
+  .finalCta > div {
+    width: calc(100% - 30px);
   }
 
   .finalCta h2 {
