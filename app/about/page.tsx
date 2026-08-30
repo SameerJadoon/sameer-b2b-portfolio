@@ -1,216 +1,140 @@
-```tsx
 import Link from "next/link";
-
-const calendly =
-  "https://calendly.com/sameerjadoon787/b2b-outbound-strategy-call";
 
 const linkedin =
   "https://www.linkedin.com/in/sameer-jadoon-45780434b/";
 
-export default function About() {
+const calendly =
+  "https://calendly.com/sameerjadoon787/b2b-outbound-strategy-call";
+
+export default function AboutPage() {
   return (
-    <main>
-      {/* NAVIGATION */}
-      <nav className="nav">
-        <div className="navInner">
-          <Link href="/" className="brand">
-            SJ<span>.</span>
-          </Link>
+    <main className="innerPage">
+      <section className="innerHero">
+        <div className="container">
+          <p className="eyebrow">ABOUT</p>
 
-          <div className="navLinks">
-            <Link href="/">Home</Link>
-            <Link href="/work">Work</Link>
-            <Link href="/services">Services</Link>
-            <Link href="/process">Process</Link>
-            <Link href="/credentials">Credentials</Link>
-            <Link href="/about">About</Link>
-          </div>
+          <h1>
+            I focus on the work
+            <span> behind the meeting.</span>
+          </h1>
 
-          <a
-            className="navCta"
-            href={calendly}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Book a Call <span>↗</span>
-          </a>
-        </div>
-      </nav>
-
-      {/* HEADER */}
-      <section className="pageHero">
-        <div className="eyebrow">ABOUT</div>
-
-        <h1>
-          Focused on the work behind a{" "}
-          <em>better outbound pipeline.</em>
-        </h1>
-
-        <p>
-          I help B2B businesses turn a defined target market into a more
-          organized and focused prospecting system.
-        </p>
-      </section>
-
-      {/* ABOUT CONTENT */}
-      <section className="section">
-        <div className="aboutLargeGrid">
-          <div>
-            <div className="eyebrow">WHO I AM</div>
-
-            <h2>
-              B2B Lead Generation & Cold Email Specialist.
-            </h2>
-          </div>
-
-          <div className="aboutText">
-            <p className="largeText">
-              My focus is simple: help businesses find the right people to
-              talk to.
-            </p>
-
-            <p>
-              I work across prospect research, B2B lead generation, lead
-              verification, personalization and cold-email strategy.
-            </p>
-
-            <p>
-              Instead of relying on mass outreach, I prefer a more
-              structured approach where the target market, prospect and
-              message all make sense together.
-            </p>
-
-            <p>
-              My toolkit includes LinkedIn Sales Navigator, Apollo,
-              Instantly, Smartlead, Google Sheets, HubSpot and Notion.
-            </p>
-          </div>
+          <p className="innerHeroText">
+            I’m a B2B Lead Generation & Cold Email Specialist focused on
+            helping businesses build a more targeted outbound pipeline.
+          </p>
         </div>
       </section>
 
-      {/* VALUES */}
-      <section className="darkSection">
-        <div className="section">
-          <div className="eyebrow lightEyebrow">HOW I WORK</div>
-
-          <h2 className="lightHeading">
-            A few principles I bring to every project.
-          </h2>
-
-          <div className="valuesGrid">
+      <section className="innerContent">
+        <div className="container">
+          <div className="contentGrid">
             <div>
+              <p className="eyebrow">MY APPROACH</p>
+
+              <h2>
+                Better outbound starts with better targeting.
+              </h2>
+            </div>
+
+            <div className="contentText">
+              <p>
+                My approach combines prospect research, accurate data,
+                personalization and thoughtful cold-email strategy rather than
+                relying on mass outreach.
+              </p>
+
+              <p>
+                I focus on understanding who a business actually wants to
+                reach, identifying the right decision-makers and creating
+                relevant reasons for those prospects to start a conversation.
+              </p>
+
+              <p>
+                The goal is simple: build an outbound system that is focused,
+                organized and repeatable.
+              </p>
+            </div>
+          </div>
+
+          <div className="aboutCards">
+            <article>
               <span>01</span>
-              <h3>Research before outreach</h3>
+              <h3>Research First</h3>
               <p>
-                Understand the market and prospect before deciding what
-                should be said.
+                Understand the offer, market and ideal customer before
+                building a prospect list.
               </p>
-            </div>
+            </article>
 
-            <div>
+            <article>
               <span>02</span>
-              <h3>Quality over volume</h3>
+              <h3>Quality Data</h3>
               <p>
-                A smaller list of relevant prospects can be more useful
-                than a large list of poorly matched contacts.
+                Find relevant contacts and verify prospect information before
+                it reaches an outreach campaign.
               </p>
-            </div>
+            </article>
 
-            <div>
+            <article>
               <span>03</span>
-              <h3>Clear communication</h3>
+              <h3>Relevant Messaging</h3>
               <p>
-                Keep messages concise, understandable and focused on a
-                legitimate reason to start a conversation.
+                Create concise outreach around the prospect’s situation rather
+                than sending generic mass messages.
               </p>
-            </div>
+            </article>
+          </div>
 
+          <div className="toolsSection">
+            <p className="eyebrow">TOOLS</p>
+
+            <div className="toolsGrid">
+              <span>LinkedIn Sales Navigator</span>
+              <span>Apollo</span>
+              <span>Instantly</span>
+              <span>Smartlead</span>
+              <span>HubSpot</span>
+              <span>Google Sheets</span>
+              <span>Google Workspace</span>
+              <span>Notion</span>
+            </div>
+          </div>
+
+          <div className="innerCta">
             <div>
-              <span>04</span>
-              <h3>Continuous improvement</h3>
-              <p>
-                Use campaign feedback and results to improve the system
-                rather than repeating the same approach.
-              </p>
+              <p className="eyebrow">LET&apos;S CONNECT</p>
+
+              <h2>
+                Have a B2B offer worth putting in front of the right people?
+              </h2>
+            </div>
+
+            <div className="innerActions">
+              <a
+                className="button primary"
+                href={calendly}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Book a Strategy Call <span>↗</span>
+              </a>
+
+              <a
+                className="button ghost"
+                href={linkedin}
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn <span>↗</span>
+              </a>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* TOOLS */}
-      <section className="section">
-        <div className="sectionHead">
-          <div>
-            <div className="eyebrow">TOOLS</div>
-
-            <h2>My outbound toolkit.</h2>
+          <div className="backLink">
+            <Link href="/">← Back to Home</Link>
           </div>
-
-          <p>
-            Tools help execute the process, but the strategy starts with
-            understanding the customer.
-          </p>
-        </div>
-
-        <div className="toolsGrid">
-          <div>LinkedIn Sales Navigator</div>
-          <div>Apollo</div>
-          <div>Instantly</div>
-          <div>Smartlead</div>
-          <div>HubSpot</div>
-          <div>Google Sheets</div>
-          <div>Google Workspace</div>
-          <div>Notion</div>
         </div>
       </section>
-
-      {/* CTA */}
-      <section className="finalCta">
-        <div>
-          <div className="eyebrow">LET'S CONNECT</div>
-
-          <h2>
-            Have a B2B offer and a market you want to reach?
-          </h2>
-
-          <p>
-            Let's talk about your target customer and outbound goals.
-          </p>
-        </div>
-
-        <a
-          href={calendly}
-          target="_blank"
-          rel="noreferrer"
-          className="button primary big"
-        >
-          Book a Strategy Call ↗
-        </a>
-      </section>
-
-      {/* FOOTER */}
-      <footer className="footer">
-        <div>
-          <strong>
-            Sameer Jadoon<span>.</span>
-          </strong>
-
-          <p>B2B Lead Generation & Cold Email Specialist</p>
-        </div>
-
-        <div className="footerLinks">
-          <a
-            href={linkedin}
-            target="_blank"
-            rel="noreferrer"
-          >
-            LinkedIn ↗
-          </a>
-
-          <Link href="/">Home</Link>
-        </div>
-      </footer>
     </main>
   );
 }
-```
