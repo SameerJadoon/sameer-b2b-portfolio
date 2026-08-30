@@ -7,7 +7,8 @@ const calendly =
 const alisonVerify =
   "https://alison.com/verify/fffd683d54";
 
-const hubspotCredential = "#hubspot-credential";
+const hubspotCredential =
+  "https://app-na2.hubspot.com/academy/achievements/9lh0vr6n/en/1/sameer-jadoon/email-marketing-certified";
 
 const services = [
   {
@@ -367,9 +368,13 @@ export default function Home() {
                   design, deliverability and campaign optimization.
                 </p>
 
-                <a href={hubspotCredential}>
-                  View Credential →
-                </a>
+                <a
+            href={hubspotCredential}
+                target="_blank"
+                  rel="noreferrer"
+>
+  View Credential →
+</a>
               </div>
             </article>
 
