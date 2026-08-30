@@ -1,4 +1,3 @@
-```tsx
 import Link from "next/link";
 
 const calendly =
@@ -7,10 +6,9 @@ const calendly =
 const linkedin =
   "https://www.linkedin.com/in/sameer-jadoon-45780434b/";
 
-export default function Work() {
+export default function WorkPage() {
   return (
     <main>
-      {/* NAVIGATION */}
       <nav className="nav">
         <div className="navInner">
           <Link href="/" className="brand">
@@ -37,13 +35,11 @@ export default function Work() {
         </div>
       </nav>
 
-      {/* PAGE HEADER */}
       <section className="pageHero">
         <div className="eyebrow">SELECTED WORK</div>
 
         <h1>
-          Outbound systems built around{" "}
-          <em>the right prospects.</em>
+          Outbound systems built around <em>the right prospects.</em>
         </h1>
 
         <p>
@@ -52,7 +48,6 @@ export default function Work() {
         </p>
       </section>
 
-      {/* CASE STUDIES */}
       <section className="section">
         <div className="caseGrid">
           <article className="caseCard featured">
@@ -71,7 +66,7 @@ export default function Work() {
             <div className="workDetails">
               <div>
                 <strong>Focus</strong>
-                <span>ICP research & prospecting</span>
+                <span>ICP research &amp; prospecting</span>
               </div>
 
               <div>
@@ -99,8 +94,8 @@ export default function Work() {
 
             <p>
               Rather than contacting businesses at random, the approach
-              focused on finding companies where the agency's service could
-              solve a relevant problem.
+              focused on finding companies where the agency&apos;s service
+              could solve a relevant problem.
             </p>
 
             <div className="workDetails">
@@ -141,7 +136,7 @@ export default function Work() {
             <div className="workDetails">
               <div>
                 <strong>Focus</strong>
-                <span>Research & data quality</span>
+                <span>Research &amp; data quality</span>
               </div>
 
               <div>
@@ -162,7 +157,6 @@ export default function Work() {
         </div>
       </section>
 
-      {/* APPROACH */}
       <section className="darkSection">
         <div className="section">
           <div className="eyebrow lightEyebrow">MY APPROACH</div>
@@ -202,7 +196,6 @@ export default function Work() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="finalCta">
         <div>
           <div className="eyebrow">START A PROJECT</div>
@@ -224,14 +217,13 @@ export default function Work() {
         </a>
       </section>
 
-      {/* FOOTER */}
       <footer className="footer">
         <div>
           <strong>
             Sameer Jadoon<span>.</span>
           </strong>
 
-          <p>B2B Lead Generation & Cold Email Specialist</p>
+          <p>B2B Lead Generation &amp; Cold Email Specialist</p>
         </div>
 
         <div className="footerLinks">
@@ -249,4 +241,3 @@ export default function Work() {
     </main>
   );
 }
-```
